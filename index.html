@@ -3,10 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Ideas Daily - Most Saved Pinterest Recipes</title>
     <meta name="description" content="Discover why 10,000+ cooks save these recipe ideas daily. Get access to Pinterest's most-saved recipes for free!">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease-in-out;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body class="font-inter antialiased">
     <!-- Announcement Bar -->
@@ -19,16 +42,40 @@
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0">
-                    <a href="/" class="text-2xl font-bold text-indigo-600">RecipesPinned</a>
+                    <a href="https://Azagentfritz.github.io/why-do-10-000--cooks-save-these-recipe-ideas-daily--find-out--2025-02-26-ponu4" class="text-2xl font-bold text-indigo-600 hover:text-indigo-700 transition-colors duration-300">RecipesPinned</a>
                 </div>
+                
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
                     <a href="#features" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Features</a>
                     <a href="#benefits" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Benefits</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Testimonials</a>
+                    <a href="#about" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">About</a>
                     <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Contact</a>
                 </div>
-                <button class="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transform hover:scale-105 transition-all duration-300">
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button md:hidden" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars text-2xl text-gray-600"></i>
+                </button>
+
+                <button class="hidden md:block bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg">
                     Get Free Access
                 </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu hidden md:hidden bg-white absolute left-0 right-0 shadow-lg">
+                <div class="px-4 py-2 space-y-4">
+                    <a href="#features" class="block text-gray-600 hover:text-indigo-600 transition-colors duration-300">Features</a>
+                    <a href="#benefits" class="block text-gray-600 hover:text-indigo-600 transition-colors duration-300">Benefits</a>
+                    <a href="#testimonials" class="block text-gray-600 hover:text-indigo-600 transition-colors duration-300">Testimonials</a>
+                    <a href="#about" class="block text-gray-600 hover:text-indigo-600 transition-colors duration-300">About</a>
+                    <a href="#contact" class="block text-gray-600 hover:text-indigo-600 transition-colors duration-300">Contact</a>
+                    <button class="w-full bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transform hover:scale-105 transition-all duration-300">
+                        Get Free Access
+                    </button>
+                </div>
             </div>
         </nav>
     </header>
@@ -36,7 +83,9 @@
     <!-- Hero Section -->
     <section class="relative h-screen">
         <div class="absolute inset-0">
-            <img src="https://images.unsplash.com/photo-1504093376055-b3094b674dcb?w=1600&h=900&fit=crop&q=80" class="w-full h-full object-cover" alt="Cooking background">
+            <img src="https://images.unsplash.com/photo-1504093376055-b3094b674dcb?w=1600&h=900&fit=crop&q=80" 
+                 class="w-full h-full object-cover" 
+                 alt="Cooking background">
             <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50"></div>
         </div>
         <div class="relative max-w-4xl mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white">
@@ -44,99 +93,158 @@
                 Why Do 10,000+ Cooks Save These Recipe Ideas Daily? Find Out!
             </h1>
             <p class="text-xl md:text-2xl mb-8">Pinterest's Most-Saved Recipes—Yours Free!</p>
-            <button class="bg-indigo-600 text-white text-lg px-8 py-4 rounded-full hover:bg-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-xl">
+            <button class="bg-indigo-600 text-white text-lg px-8 py-4 rounded-full hover:bg-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl">
                 Get Free Access Now
             </button>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="py-24 bg-gray-50">
+    <section id="features" class="py-24 bg-gray-50">
         <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16">Our Features</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                     <div class="text-indigo-600 text-4xl mb-4">🏆</div>
                     <h3 class="text-2xl font-bold mb-4">Most-Saved & Free!</h3>
-                    <p class="text-gray-600">Access the most popular and trending recipes on Pinterest, completely free.</p>
+                    <p class="text-gray-600">Access the most popular and trending recipes on Pinterest, completely free. Updated daily with fresh content.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                     <div class="text-indigo-600 text-4xl mb-4">👨‍🍳</div>
                     <h3 class="text-2xl font-bold mb-4">Top Recipes!</h3>
-                    <p class="text-gray-600">Curated collection of highest-rated recipes that actually work.</p>
+                    <p class="text-gray-600">Curated collection of highest-rated recipes that actually work. Tested and approved by professional chefs.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                     <div class="text-indigo-600 text-4xl mb-4">⭐</div>
                     <h3 class="text-2xl font-bold mb-4">Chef-Obsessed!</h3>
-                    <p class="text-gray-600">Professional chef-approved recipes and techniques.</p>
+                    <p class="text-gray-600">Professional chef-approved recipes and techniques. Step-by-step guides with expert tips.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Benefits Section -->
-    <!-- Benefit 1 -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <h2 class="text-3xl font-bold">Viral Recipes</h2>
-                    <p class="text-gray-600 text-lg">Get instant access to recipes that are trending and viral on Pinterest. Never miss out on the latest food trends.</p>
-                    <button class="bg-indigo-600 text-white px-8 py-3 rounded-full hover:bg-indigo-700 transform hover:scale-105 transition-all duration-300">
-                        Start Cooking Now
-                    </button>
+    <section id="benefits">
+        <!-- Benefit 1 -->
+        <div class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <h2 class="text-3xl font-bold">Viral Recipes at Your Fingertips</h2>
+                        <p class="text-gray-600 text-lg">Get instant access to recipes that are taking Pinterest by storm. Our curated collection features the most-saved, tried-and-tested recipes that are guaranteed to impress. Stay ahead of food trends and discover new cooking inspiration daily.</p>
+                        <button class="bg-indigo-600 text-white px-8 py-3 rounded-full hover:bg-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg">
+                            Start Cooking Now
+                        </button>
+                    </div>
+                    <div class="order-first md:order-last">
+                        <img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&h=600&fit=crop&q=80" 
+                             class="rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300" 
+                             alt="Viral recipes">
+                    </div>
                 </div>
-                <div class="order-first md:order-last">
-                    <img src="https://images.unsplash.com/photo-1556740714-a8395b3bf30f?w=800&h=600&fit=crop&q=80" 
-                         class="rounded-2xl shadow-xl" alt="Viral recipes">
+            </div>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?w=800&h=600&fit=crop&q=80" 
+                             class="rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300" 
+                             alt="Save time cooking">
+                    </div>
+                    <div class="space-y-6">
+                        <h2 class="text-3xl font-bold">Save Precious Time in the Kitchen</h2>
+                        <p class="text-gray-600 text-lg">Our collection features quick and efficient recipes that don't compromise on taste. Perfect for busy professionals, parents, and anyone who wants to create delicious meals without spending hours in the kitchen. Each recipe is optimized for maximum flavor with minimum effort.</p>
+                        <button class="bg-indigo-600 text-white px-8 py-3 rounded-full hover:bg-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg">
+                            Save Time Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <h2 class="text-3xl font-bold">Free Forever, No Strings Attached</h2>
+                        <p class="text-gray-600 text-lg">Enjoy unlimited access to our entire recipe collection without ever paying a dime. No hidden fees, no subscription required, and no credit card needed. We believe great recipes should be accessible to everyone, and we're committed to keeping it that way.</p>
+                        <button class="bg-indigo-600 text-white px-8 py-3 rounded-full hover:bg-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-md hover:shadow-lg">
+                            Get Free Access
+                        </button>
+                    </div>
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=800&h=600&fit=crop&q=80" 
+                             class="rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300" 
+                             alt="Free forever">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefit 2 -->
-    <section class="py-16 bg-gray-50">
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-gray-50">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <img src="https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?w=800&h=600&fit=crop&q=80" 
-                         class="rounded-2xl shadow-xl" alt="Save time cooking">
+            <h2 class="text-4xl font-bold text-center mb-16">What Our Users Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 mb-4">"These recipes have transformed my weeknight cooking. The quick dinner ideas are perfect for my busy schedule, and everything I've tried has been delicious!"</p>
+                    <p class="font-semibold">Sarah Johnson</p>
+                    <p class="text-sm text-gray-500">Working Mom, Boston</p>
                 </div>
-                <div class="space-y-6">
-                    <h2 class="text-3xl font-bold">Save Time</h2>
-                    <p class="text-gray-600 text-lg">Quick and easy recipes that don't compromise on taste. Perfect for busy cooks.</p>
-                    <button class="bg-indigo-600 text-white px-8 py-3 rounded-full hover:bg-indigo-700 transform hover:scale-105 transition-all duration-300">
-                        Save Time Now
-                    </button>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 mb-4">"As a beginner cook, I love how detailed and easy-to-follow these recipes are. The step-by-step instructions are incredibly helpful."</p>
+                    <p class="font-semibold">Mike Chen</p>
+                    <p class="text-sm text-gray-500">Student, San Francisco</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 mb-4">"I've tried countless recipe websites, but this collection is truly special. The viral recipes are always crowd-pleasers at family gatherings."</p>
+                    <p class="font-semibold">Emma Rodriguez</p>
+                    <p class="text-sm text-gray-500">Food Blogger</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="text-yellow-400 mb-4">★★★★★</div>
+                    <p class="text-gray-600 mb-4">"The fact that it's completely free is amazing! I've saved so much time and money using these recipes instead of ordering takeout."</p>
+                    <p class="font-semibold">David Thompson</p>
+                    <p class="text-sm text-gray-500">Home Cook</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefit 3 -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <h2 class="text-3xl font-bold">Free Forever</h2>
-                    <p class="text-gray-600 text-lg">No hidden fees, no subscription required. Access all recipes completely free.</p>
-                    <button class="bg-indigo-600 text-white px-8 py-3 rounded-full hover:bg-indigo-700 transform hover:scale-105 transition-all duration-300">
-                        Get Free Access
-                    </button>
-                </div>
-                <div>
-                    <img src="https://images.unsplash.com/photo-1471341971476-ae15ff5dd4ea?w=800&h=600&fit=crop&q=80" 
-                         class="rounded-2xl shadow-xl" alt="Free forever">
-                </div>
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-12">About Us</h2>
+            <div class="space-y-8 text-gray-600">
+                <p class="text-lg leading-relaxed">
+                    Founded in 2020, RecipesPinned began as a passion project by a group of food enthusiasts who noticed how difficult it was to find reliable, tested recipes online. What started as a small collection of favorite Pinterest recipes has grown into a comprehensive platform serving over 10,000 daily users.
+                </p>
+                <p class="text-lg leading-relaxed">
+                    Our mission is to make cooking accessible, enjoyable, and stress-free for everyone. We believe that good food brings people together, and that's why we're committed to providing free access to the best recipes on Pinterest. Our core values include transparency, community support, and a dedication to helping people discover the joy of cooking.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Final CTA Section -->
     <section class="relative py-24 bg-indigo-600">
-        <div class="container mx-auto px-4 text-center text-white">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=1600&h=900&fit=crop&q=80" 
+                 class="w-full h-full object-cover opacity-20" 
+                 alt="Cooking background">
+        </div>
+        <div class="relative container mx-auto px-4 text-center text-white">
             <h2 class="text-4xl font-bold mb-8">Ready to Start Cooking?</h2>
             <p class="text-xl mb-8">Join 10,000+ happy cooks who save these recipes daily</p>
-            <button class="bg-white text-indigo-600 text-lg px-8 py-4 rounded-full hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-xl">
+            <button class="bg-white text-indigo-600 text-lg px-8 py-4 rounded-full hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl">
                 Get Free Access Now
             </button>
         </div>
@@ -153,12 +261,15 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Contact</h4>
                     <p class="text-gray-400">info@recipeideaspinned.com</p>
+                    <p class="text-gray-400 mt-2">1234 Recipe Lane</p>
+                    <p class="text-gray-400">Foodie City, FC 12345</p>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Legal</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors duration-300">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors duration-300">Terms of Service</a></li>
+                        <li><a href="https://Azagentfritz.github.io/why-do-10-000--cooks-save-these-recipe-ideas-daily--find-out--2025-02-26-ponu4/privacy.html" class="hover:text-white transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="https://Azagentfritz.github.io/why-do-10-000--cooks-save-these-recipe-ideas-daily--find-out--2025-02-26-ponu4/terms.html" class="hover:text-white transition-colors duration-300">Terms of Service</a></li>
+                        <li><a href="https://Azagentfritz.github.io/why-do-10-000--cooks-save-these-recipe-ideas-daily--find-out--2025-02-26-ponu4/blog.html" class="hover:text-white transition-colors duration-300">Blog</a></li>
                     </ul>
                 </div>
                 <div>
@@ -180,5 +291,36 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
 </body>
 </html>
